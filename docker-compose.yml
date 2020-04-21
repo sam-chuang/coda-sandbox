@@ -1,0 +1,16 @@
+version: "3"
+services:
+  sandbox:
+    image: node:13.13.0-stretch-slim
+    volumes:
+      - coda_sandbox_node_modules:/usr/src/sandbox/node_modules
+      - .:/usr/src/sandbox
+    environment:
+      - NODE_ENV=development
+    working_dir: /usr/src/sandbox
+    command: bash -c "npm install && npm start"
+    ports:
+      - 9229:9229
+volumes:
+  coda_sandbox_node_modules:
+    external: true
