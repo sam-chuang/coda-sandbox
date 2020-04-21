@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node --innpmp spect-brk=0.0.0.0:9229 src/index.js",
+    "start": "node --inspect-brk=0.0.0.0:9229 src/index.js",
     "dev": "docker-compose up",
     "test": "",
     "prepare": "docker volume create coda_sandbox_node_modules"
